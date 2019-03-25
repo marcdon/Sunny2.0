@@ -27,6 +27,8 @@ public class UserloginActivity extends AppCompatActivity {
 
     public FirebaseAuth Fauth;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,12 +41,12 @@ public class UserloginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                signIn(); //calls the function
+                authaccount(); //calls the function
             }
         });
     }
 
-    private void signIn(){
+    private void authaccount(){
 
         EditText accountemail = findViewById(R.id.email);
         EditText accountpassword = findViewById(R.id.password);

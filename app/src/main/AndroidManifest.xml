@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="e.marc.sunny">
+    package="e.marc.sunny"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        tools:replace="android:icon,android:theme"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Sunny"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -18,7 +19,7 @@
         </activity>
         <activity android:name=".sunnyPasswordActivity" />
         <activity android:name=".UserloginActivity" />
-        <activity android:name=".DashboardActivity"></activity>
+        <activity android:name=".DashboardActivity" />
+        <activity android:name=".homepageActivity"></activity>
     </application>
-
 </manifest>
