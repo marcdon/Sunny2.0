@@ -92,12 +92,11 @@ public class SignupActivity extends AppCompatActivity {
                                     Toast.makeText(SignupActivity.this, "Failed." + task.getException(),
                                             Toast.LENGTH_SHORT).show();
                                 } else {
-                                    startActivity(new Intent(SignupActivity.this, DashboardActivity.class));
+                                    startActivity(new Intent(SignupActivity.this, UserloginActivity.class));
                                     finish();
                                 }
                             }
                         });
-
             }
         });
     }

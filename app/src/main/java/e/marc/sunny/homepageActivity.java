@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import com.allyants.boardview.BoardItem;
 import com.allyants.boardview.BoardView;
 import com.allyants.boardview.SimpleBoardAdapter;
 
@@ -23,7 +24,7 @@ public class homepageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_homepage);
 
         BoardView boardView = findViewById(R.id.boardView);
-//        BoardItem boardItem = findViewById(R.id.boardItem);
+        BoardItem boardItem = findViewById(R.id.boardItem);
 
         //create Item
 
@@ -34,12 +35,13 @@ public class homepageActivity extends AppCompatActivity {
 
         data.add(new SimpleBoardAdapter.SimpleColumn("Column 1", list));
         data.add(new SimpleBoardAdapter.SimpleColumn("Column 2", list));
-        data.add(new SimpleBoardAdapter.SimpleColumn("Column 3", list));
+        data.add(new SimpleBoardAdapter.SimpleColumn("Column 5", list));
         data.add(new SimpleBoardAdapter.SimpleColumn("Column 4", list));
 
 
         SimpleBoardAdapter boardAdapter = new SimpleBoardAdapter(this,data);
         boardView.setAdapter(boardAdapter);
+
 
         boardView.setOnItemClickListener(new BoardView.ItemClickListener() {
             @Override
@@ -54,6 +56,5 @@ public class homepageActivity extends AppCompatActivity {
                Toast.makeText(homepageActivity.this, ""+data.get(i).header, Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 }
