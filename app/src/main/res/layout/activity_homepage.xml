@@ -12,7 +12,15 @@
         android:id="@+id/boardView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:boardItemBackground="#1190CB"/>
+        app:boardItemBackground="#1190CB">
+
+        <com.allyants.boardview.BoardItem
+            android:id="@+id/boardItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </com.allyants.boardview.BoardView>
 
 
 </RelativeLayout>

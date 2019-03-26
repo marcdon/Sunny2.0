@@ -1,12 +1,12 @@
 package e.marc.sunny;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -32,7 +32,8 @@ public class DashboardActivity extends AppCompatActivity {
         signOutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
+                Toast.makeText(getApplicationContext(),"sign out button clicked", Toast.LENGTH_SHORT).show();
+                FirebaseAuth.getInstance().signOut(); //check if user is signed in
             }
         });
 
@@ -54,7 +55,7 @@ public class DashboardActivity extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user == null) {
-                    startActivity(new Intent(DashboardActivity.this, UserloginActivity.class));
+                    startActivity(new Intent(DashboardActivity.this, SignupActivity.class));
                     finish();
                 }
             }

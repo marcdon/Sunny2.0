@@ -29,4 +29,6 @@
     <string name="forgot_password_msg">Email has been sent .</string>
     <string name="signinBtn">Already Registered? Let\'s Go!</string>
     <string name="sunnylogo">sunnylogo</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="dashboard">Dashboard</string>
 </resources>
