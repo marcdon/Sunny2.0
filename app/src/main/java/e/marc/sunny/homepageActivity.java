@@ -2,6 +2,7 @@ package e.marc.sunny;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -41,7 +42,12 @@ public class homepageActivity extends AppCompatActivity {
 
         SimpleBoardAdapter boardAdapter = new SimpleBoardAdapter(this,data);
         boardView.setAdapter(boardAdapter);
-
+        boardView.setOnDoneListener(new BoardView.DoneListener() {
+            @Override
+            public void onDone() {
+                Log.e("scroll","done");
+            }
+        });
 
         boardView.setOnItemClickListener(new BoardView.ItemClickListener() {
             @Override
@@ -57,4 +63,5 @@ public class homepageActivity extends AppCompatActivity {
             }
         });
     }
+
 }

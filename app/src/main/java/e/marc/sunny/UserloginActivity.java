@@ -28,6 +28,15 @@ public class UserloginActivity extends AppCompatActivity {
     public FirebaseAuth Fauth;
 
 
+    @Override
+    public void onResume(){
+        super.onResume();
+        Fauth = FirebaseAuth.getInstance(); //takes user back to login page once logged in
+        if (Fauth.getCurrentUser()!= null){
+            Intent intent = new Intent(UserloginActivity.this, UserloginActivity.class);
+            startActivity(intent);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
