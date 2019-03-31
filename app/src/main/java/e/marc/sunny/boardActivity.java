@@ -16,7 +16,6 @@ import java.util.ArrayList;
 
 public class boardActivity extends AppCompatActivity {
 
-
     public FirebaseAuth.AuthStateListener authListener;
     public FirebaseAuth auth;
     public String user;
