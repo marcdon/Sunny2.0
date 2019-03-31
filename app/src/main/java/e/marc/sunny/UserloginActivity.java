@@ -71,7 +71,7 @@ public class UserloginActivity extends AppCompatActivity {
                             Toast.makeText(UserloginActivity.this, "Details Accepted",
                                     Toast.LENGTH_SHORT).show();
                             FirebaseUser user = Fauth.getCurrentUser();
-                            startActivity(new Intent(UserloginActivity.this, DashboardActivity.class));
+                            startActivity(new Intent(UserloginActivity.this, boardActivity.class));
                         } else {
                             // If sign in fails, display a message to the user.
 

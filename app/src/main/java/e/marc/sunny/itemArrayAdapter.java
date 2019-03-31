@@ -10,13 +10,13 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 
-class ItemArrayAdapter extends RecyclerView.Adapter<ItemArrayAdapter.ViewHolder> {
+public class itemArrayAdapter extends RecyclerView.Adapter<itemArrayAdapter.ViewHolder> { //issue may be here
 
     //All methods in this adapter are required for a bare minimum recyclerview adapter
     private int listItemLayout;
     private ArrayList<sunnyItem> itemList;
     // Constructor of the class
-    public ItemArrayAdapter(int layoutId, ArrayList<sunnyItem> itemList) {
+    public itemArrayAdapter(int layoutId, ArrayList<sunnyItem> itemList) {
         listItemLayout = layoutId;
         this.itemList = itemList;
     }

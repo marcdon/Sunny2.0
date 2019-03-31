@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 
-public class DashboardActivity extends AppCompatActivity {
+public class boardActivity extends AppCompatActivity {
 
 
     public FirebaseAuth.AuthStateListener authListener;
@@ -28,13 +28,14 @@ public class DashboardActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard);
+        setContentView(R.layout.activity_board);
 
         auth = FirebaseAuth.getInstance();
         final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
         ArrayList<sunnyItem> itemList = new ArrayList<sunnyItem>();
 
-        ItemArrayAdapter itemArrayAdapter = new ItemArrayAdapter(R.layout.layout, itemList);
+        itemArrayAdapter itemArrayAdapter = new itemArrayAdapter(R.layout.layout, itemList);
         recyclerView = (RecyclerView) findViewById(R.id.item_list);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -50,7 +51,7 @@ public class DashboardActivity extends AppCompatActivity {
 
     public void onClickLogout (View view) {
         FirebaseAuth.getInstance().signOut();
-        Intent intent =new Intent(DashboardActivity.this, UserloginActivity.class);
+        Intent intent =new Intent(boardActivity.this, UserloginActivity.class);
         startActivity(intent);
         finish();
 

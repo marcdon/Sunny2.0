@@ -31,4 +31,6 @@
     <string name="sunnylogo">sunnylogo</string>
     <string name="sign_out">Sign Out</string>
     <string name="dashboard">Dashboard</string>
+    <string name="navigationtitle">Navigation</string>
+    <string name="number_of_hours_available">Number of hours available</string>
 </resources>

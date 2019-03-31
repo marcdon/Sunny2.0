@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon,android:theme">
-        <activity android:name=".homepageActivity">
+        <activity android:name=".planner">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,9 +20,12 @@
         </activity>
         <activity android:name=".sunnyPasswordActivity" />
         <activity android:name=".UserloginActivity" />
-        <activity android:name=".DashboardActivity" />
-        <activity android:name=".ItemArrayAdapter"/>
-        <activity android:name=".SignupActivity"></activity>
+        <activity android:name=".homepageActivity" />
+        <activity android:name=".itemArrayAdapter" />
+        <activity android:name=".boardActivity" />
+        <activity android:name=".navigationActivity"/>
+        <activity android:name=".BoardLocater" />
+        <activity android:name=".SignupActivity" />
     </application>
 
 </manifest>
