@@ -21,7 +21,6 @@
         <activity android:name=".sunnyPasswordActivity" />
         <activity android:name=".planner" />
         <activity android:name=".homepageActivity" />
-        <activity android:name=".itemArrayAdapter" />
         <activity android:name=".boardActivity" />
         <activity android:name=".navigationActivity"/>
         <activity android:name=".BoardLocater" />

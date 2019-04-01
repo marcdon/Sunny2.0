@@ -27,7 +27,7 @@ public class itemArrayAdapter extends RecyclerView.Adapter<itemArrayAdapter.View
     }
 
 
-    // specify the row layout file and click for each row
+    // specify the row columnLayout file and click for each row
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(listItemLayout, parent, false);
