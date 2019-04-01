@@ -42,7 +42,7 @@ public class boardActivity extends AppCompatActivity {
 
         // Populating list items
         for(int i=0; i<100; i++) {
-            itemList.add(new sunnyItem("Item " + i));
+            itemList.add(new sunnyItem("sunnyItem " + i));
         }
 
 

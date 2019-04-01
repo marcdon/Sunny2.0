@@ -1,9 +1,9 @@
 package e.marc.sunny;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,15 +28,15 @@ public class UserloginActivity extends AppCompatActivity {
     public FirebaseAuth Fauth;
 
 
-    @Override
-    public void onResume(){
-        super.onResume();
-        Fauth = FirebaseAuth.getInstance(); //takes user back to login page once logged in
-        if (Fauth.getCurrentUser()!= null){
-            Intent intent = new Intent(UserloginActivity.this, UserloginActivity.class);
-            startActivity(intent);
-        }
-    }
+//    @Override
+//    public void onResume(){
+//        super.onResume();
+//        Fauth = FirebaseAuth.getInstance(); //takes user back to login page once logged in
+//        if (Fauth.getCurrentUser()!= null){
+//            Intent intent = new Intent(UserloginActivity.this, UserloginActivity.class);
+//            startActivity(intent);
+//        }
+//    } // this doesnt work - fix later
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
