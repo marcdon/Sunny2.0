@@ -13,9 +13,10 @@ public class itemArrayAdapter extends RecyclerView.Adapter<itemArrayAdapter.View
 
     //All methods in this adapter are required for a bare minimum recyclerview adapter
     private int listItemLayout;
-    private ArrayList<sunnyItem> itemList;
+    private ArrayList<Item> itemList;
     // Constructor of the class
-    public itemArrayAdapter(int layoutId, ArrayList<sunnyItem> itemList) {
+
+    public itemArrayAdapter(int layoutId, ArrayList<Item> itemList) {
         listItemLayout = layoutId;
         this.itemList = itemList;
     }
@@ -27,7 +28,7 @@ public class itemArrayAdapter extends RecyclerView.Adapter<itemArrayAdapter.View
     }
 
 
-    // specify the row columnLayout file and click for each row
+    // specify the row columnlayout file and click for each row
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(listItemLayout, parent, false);
@@ -39,7 +40,7 @@ public class itemArrayAdapter extends RecyclerView.Adapter<itemArrayAdapter.View
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int listPosition) {
         TextView item = holder.item;
-        item.setText(itemList.get(listPosition).getName());
+      //  item.setText(itemList.get(listPosition).getName());
     }
 
     // Static inner class to initialize the views of rows
